@@ -1,0 +1,12 @@
+flask
+ultralytics
+torch
+torchvision
+opencv-python
+numpy
+pillow
+matplotlib
+scikit-learn
+tqdm
+pandas
+seaborn

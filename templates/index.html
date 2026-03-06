@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Classifier - YOLOv8</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <h1>AI Image Detection</h1>
+            <p class="subtitle">Experience state-of-the-art object detection using YOLOv8.</p>
+
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <div class="upload-section" onclick="document.getElementById('file').click()">
+                    <input type="file" name="file" id="file" required style="display: none;">
+                    <div id="file-label" style="font-weight: 600; color: var(--primary-color);">Click to Select Image
+                    </div>
+                    <p style="margin-top: 10px; color: var(--text-muted); font-size: 0.9rem;">Supports: JPG, PNG, WEBP
+                    </p>
+                </div>
+                <button type="submit" class="btn">Analyze Now</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('file').onchange = function () {
+            document.getElementById('file-label').innerHTML = this.files[0].name;
+            document.getElementById('file-label').style.color = 'var(--accent-color)';
+        };
+    </script>
+</body>
+
+</html>

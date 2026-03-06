@@ -1,0 +1,9 @@
+path: C:/Users/user/.gemini/antigravity/scratch/DeepLearning_Image_Classifier/dataset
+train: train/images
+val: val/images
+test: test/images
+
+# Classes
+nc: 2
+names: ['apple', 'orange']
+
