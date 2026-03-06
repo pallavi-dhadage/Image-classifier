@@ -36,3 +36,8 @@ static/results/*
 # OS
 .DS_Store
 Thumbs.db
+
+# Personal Photos
+*mine*
+**/mine.jpg
+**/result_mine.jpg
